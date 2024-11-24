@@ -660,6 +660,20 @@ main.drake-main {
 
 
 /* 06 - Left Sidebar */
+/* .left-sidebar {
+    max-width: 485px;
+    width: 100%;
+    border-radius: 30px;
+    border: 1px solid #565656;
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 50px;
+    z-index: 10;
+    margin-top: 35px;
+   
+} */
 .left-sidebar {
     max-width: 485px;
     width: 100%;
@@ -671,7 +685,34 @@ main.drake-main {
     transform: translateY(-50%);
     padding: 50px;
     z-index: 10;
+    margin-top: 35px;
+    padding-bottom: 35px;
+    overflow-y: auto; /* Enables vertical scrolling */
+    overflow-x: hidden; /* Hides horizontal scrollbar */
+    max-height: 90vh; /* Limits height to 90% of the viewport */
+    box-sizing: border-box; /* Ensures padding does not add extra width */
+
+    scrollbar-width: thin; 
+    scrollbar-color: #565656 transparent; /* Scrollbar color */
 }
+
+/* For WebKit-based browsers (Chrome, Edge, etc.) */
+.left-sidebar::-webkit-scrollbar {
+    width: 6px; /* Adjust scrollbar width */
+}
+
+.left-sidebar::-webkit-scrollbar-thumb {
+    background-color: #565656; /* Scrollbar thumb color */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.left-sidebar::-webkit-scrollbar-track {
+    background: transparent; /* Scrollbar track color */
+}
+
+
+
+
 .drake-main .left-sidebar {
     display: none;
 }
